@@ -1,0 +1,70 @@
+Ciulinca Andra Stefania
+314CA
+
+Programul foloseste alocare dinamica pentru a realiza operatii numerice 
+cu matrici.Astfel, scopul acestui program este de a representa in memorie 
+un vector de matrici in care se vor face diversele operatii.
+
+Functii ajutatoare:
+
+Avem functia 'mod' prin care operatiile matematice vor fi calculate modulo 
+10^4 + 7.Dacă rezultatul operatiei dupa modulo este un număr negativ, se va aduna 
+la rezultat numărul cu care se face operatia la modulo în cazul nostru 10^4 + 7.
+
+Avem functia 'unitate' prin care facem matricea unitate.
+
+Avem functia 'multiply' prin care facem operatia de inmultire 
+a doua matrici patratice
+
+Avem urmatoarele operatii:
+
+'L' - in acest caz programul va incarca o matrice in memorie.
+Acest lucru se realizeza prin citirea dimensiunilor, alocand memorie
+si citind elem matricei prin 2 functii 'alloc_matrix' si 'read_matrix'.
+ 
+'D' - pt aceasta operatie se citeste un index si daca exista o matrice
+cu acest index se afiseaza dimensiunile matricei.
+
+'P' - aceasta operatie afiseaza matricea cu indexul citit daca exista.
+
+'C' - ('C_function')in acest caz se redimensioneaza o matrice 
+a carui index il citim de la tastatura, Se citesc 
+si indicii dupa care se face redimensionarea.astefel raman in
+matrice doar elementele gasite ce corespund liniilor si 
+coloanelor incluse in dimensiunile citite
+
+'M' - aceasta functie ('M-function') face un algoritm standard
+de inmultire a matricilor. Acest algoritm se poate realiza daca 
+nr de coloane al primei matrici este egal cu nr de linii a celei 
+de-a doua matrice. Dupa verificare se aloca memorie pt matricea
+ce va rezulta din inmultirea celor doua, pt linii si pt coloane,
+se face algoritmul, si se creste nr de matrici din vector
+
+'T' - in aceasta functie('T_function') se calculeaza transpusa
+unei matrice a carui index se citeste de la tastatura. Avem nevoie
+de o alta matrice in care sa facem transpusa si pt care alocam memorie.
+Transpusa se creeaza apoi inversand liniile si coloanele.Apoi 
+matricea transpusa este steara si inlocuita cu transpusa si 
+se inlocuiesc si valorile din vectorul de linii si coloane
+
+'O' - aceasta operatie('O_function') ordoneaza vectorul de matricii in 
+functie de suma elem din fiecare matrice. Astfel construim un vecor care
+sa contina suma elementelor, apoi ordonam cu un algoritm standard,
+atat indexul cat si dimensiunile.
+
+'R' - aceasta functie('R_function') ridica la putere o matrice. Pt acest
+lucru citim indexul matricii si putereala care vrem sa ridicam.Facem 
+verificarile necesare pt a vedea daca putem face operatia: daca exista o
+matrice cu indexul dat, daca puterea este pozitiva, daca matricea este patratica.
+Aplicam algoritmul de ridicare la putere in timp logaritmic: verificam daca 
+puterea este impara si facem inmultirile necesare, apoi ridicam la patrat matricea 
+auxiliara pana cand puterea se face 0. Dupa terminarea algoritmului inlocuim 
+matricea pe care am ridicat-o la putere cu matricea care a rezultat si eliberam
+memorie.
+
+'F' - la aceasta comanda('F_function') este stearsa o matricea
+din vectorul de matrici si le muta pe celelalte cu o pozitie spre
+stanga.
+
+'Q' - in acest caz toata memoria alocata este eliberata si se iese din
+program.
